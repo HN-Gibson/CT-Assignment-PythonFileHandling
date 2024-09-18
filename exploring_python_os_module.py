@@ -16,17 +16,17 @@ def list_directory_contents(path):
     return
 
 while True:
-        try:
-            user_input = input("Enter a path to print the contents:\n(Type 'quit' to exit)\n")
-            if user_input == "quit":
-                break
-            else:
-                list_directory_contents(user_input)
-        except FileNotFoundError:
-            print("File Not Found Error: Path does not exist. Please enter a valid path.")
-        except PermissionError:
-            print("Permission Error: You do not have permissions for this file. Please try another file.")
-        except OSError:
-            print("OS Error: Please make sure to remove quotations from beginning and end of path.")
-        except Exception:
-            print("Unknown Error: Please try a different path.") 
+    try:
+        user_input = input("Enter a path to print the contents:\n(Type 'quit' to exit)\n")
+        if user_input == "quit":
+            break
+        else:
+            list_directory_contents(user_input)
+    except FileNotFoundError:
+        print("File Not Found Error: Path does not exist. Please enter a valid path.")
+    except PermissionError:
+        print("Permission Error: You do not have permissions for this file. Please try another file.")
+    except OSError:
+        print("OS Error: Please make sure to remove quotations from beginning and end of path.")
+    except Exception:
+        print("Unknown Error: Please try a different path.") 
