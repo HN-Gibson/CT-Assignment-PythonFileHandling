@@ -11,9 +11,10 @@ import os
 def list_directory_contents(path):
     with open(f"{path}") as f:
         directory_list = os.listdir(path)
-        print(f"The following directories and files were found in '{path}'")
-        for directory in directory_list:
-            print(directory)
+        print(directory_list)
+        # print(f"The following directories and files were found in '{path}'")
+        # for directory in directory_list:
+        #     print(directory)
     return
 
 while True:
